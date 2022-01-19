@@ -70,7 +70,7 @@ Rating.belongsTo(Device)
 Device.hasMany(StackDevice)
 StackDevice.belongsTo(Device)
 
-Device.hasMany(DeviceInfo)
+Device.hasMany(DeviceInfo, {as: 'console.info()'})
 DeviceInfo.belongsTo(Device)
 
 Type.belongsToMany(Brand, {through: TypeBrand} )
